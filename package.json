@@ -1,0 +1,20 @@
+{
+  "name": "elearning-platform",
+  "version": "9.0.0",
+  "description": "EduAI E-Learning Platform — React + Node.js + MongoDB + Razorpay",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "build": "cd client && npm install && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "cd server && node server.js",
+    "start:dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "postinstall": "echo 'Root installed. Run npm run install:all for full setup.'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
